@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/calculatorFeatures"
         ,glue={"com/adaptavist/tm4j/cucumberExample/stepDefinition"}
-        ,plugin = {"junit:target/cucumber/result.xml","json:target/cucumber.json"}
+        ,plugin = {"junit:target/cucumber/result.xml","json:target/cucumber/calculator.json"}
 )
 
 public class TestRunner {
