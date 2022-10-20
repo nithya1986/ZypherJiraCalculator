@@ -5,7 +5,7 @@ import com.adaptavist.tm4j.cucumberExample.calculator.Calculator;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-
+import static org.junit.Assert.*;				
 
 
 public class CalculatorTest {
@@ -24,13 +24,13 @@ public class CalculatorTest {
 
     @And("^I multiply (\\d+) and (\\d+) and the result is (\\d+)$")
     public void numbersAreMultiplied(long number1, long number2, int result) {
-    	System.out.println("Multiplication of "+number1+ "and" +number2+ "is " +c.multiply(number1, number2));
-        //assertEquals(result, c.multiply(number1, number2));
+    	//System.out.println("Multiplication of "+number1+ "and" +number2+ "is " +c.multiply(number1, number2));
+    	assertEquals(result, c.multiply(number1, number2));
     }
 
     @Then("^I sum (\\d+) and (\\d+) and the result is (\\d+)$")
     public void numbersAreSummedUp(int number1, int number2, int result) {
     	System.out.println("Sum of "+number1+ "and" +number2+ "is " +c.sum(number1, number2));
-        //assertEquals(result, c.sum(number1, number2));
+       //assertEquals(result, c.sum(number1, number2));
     }
 }
